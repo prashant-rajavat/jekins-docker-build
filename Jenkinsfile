@@ -1,6 +1,6 @@
 pipeline {
     stages {
-        stage('build and push') {
+        stage('build') {
             sh "docker build -t docker/getting-started ."
         }
     }
