@@ -1,0 +1,44 @@
+name: Multi-Tenant Build and Deploy
+
+on:
+  workflow_dispatch:
+    inputs:
+      tenant_name:
+        description: 'Enter tenantName'
+        required: true
+        type: string
+      tenant_id:
+        description: 'Enter tenantID of tenant'
+        required: true
+        type: string
+
+jobs:
+  prepare:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Sleep for 1 minute
+        run: sleep 1m
+
+  build:
+    needs: [prepare]
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Sleep for 1 minute
+        run: sleep 1m
+
+  deploy:
+    needs: [prepare, build]
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Sleep for 1 minute
+        run: sleep 1m
+
