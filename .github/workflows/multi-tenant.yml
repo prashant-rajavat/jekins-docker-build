@@ -19,6 +19,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: echo inputs
+        run: |
+          echo "TenantName=${{ inputs.tenant_name }}"
+          echo "TenantID=${{ inputs.tenant_id }}"
+
       - name: Sleep for 1 minute
         run: sleep 1m
 
@@ -29,6 +34,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: echo inputs
+        run: |
+          echo "TenantName=${{ inputs.tenant_name }}"
+          echo "TenantID=${{ inputs.tenant_id }}"
+
       - name: Sleep for 1 minute
         run: sleep 1m
 
@@ -38,6 +48,11 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: echo inputs
+        run: |
+          echo "TenantName=${{ inputs.tenant_name }}"
+          echo "TenantID=${{ inputs.tenant_id }}"f
 
       - name: Sleep for 1 minute
         run: sleep 1m
