@@ -1,0 +1,28 @@
+name: Multi-Tenant Build and Deploy
+
+on:
+  workflow_dispatch:
+    inputs:
+      tenant_name:
+        description: 'Enter tenantName'
+        required: true
+        type: string
+      tenant_id:
+        description: 'Enter tenantID of tenant'
+        required: true
+        type: string
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: echo inputs
+        run: |
+          echo "TenantName=${{ inputs.tenant_name }}"
+          echo "TenantID=${{ inputs.tenant_id }}"
+
+      - name: exit
+        run: sdssdgfsdgsdg
