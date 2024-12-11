@@ -1,4 +1,4 @@
-name: Multi-Tenant Build and Deploy
+name: Build
 
 on:
   workflow_dispatch:
