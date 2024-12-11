@@ -24,8 +24,8 @@ jobs:
           echo "TenantName=${{ inputs.tenant_name }}"
           echo "TenantID=${{ inputs.tenant_id }}"
 
-      - name: Sleep for 1 minute
-        run: sleep 1m
+      - name: Sleep for 30 Second
+        run: sleep 30s
 
   build:
     needs: [prepare]
@@ -39,8 +39,8 @@ jobs:
           echo "TenantName=${{ inputs.tenant_name }}"
           echo "TenantID=${{ inputs.tenant_id }}"
 
-      - name: Sleep for 1 minute
-        run: sleep 1m
+      - name: Sleep for 30 Second
+        run: sleep 30s
 
   deploy:
     needs: [prepare, build]
@@ -54,6 +54,6 @@ jobs:
           echo "TenantName=${{ inputs.tenant_name }}"
           echo "TenantID=${{ inputs.tenant_id }}"f
 
-      - name: Sleep for 1 minute
-        run: sleep 1m
+      - name: Sleep for 30 Second
+        run: sleep 30s
 
